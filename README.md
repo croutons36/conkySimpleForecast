@@ -1,4 +1,4 @@
-test# Conky SimpleForecast
+Conky SimpleForecast
 
 <div align="center"><img src="screenshot2.png" width="500"></div>
 
