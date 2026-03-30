@@ -295,7 +295,7 @@ function wind_deg_to_text() {
 function wind_deg_to_font() {
   local deg=$1
   text=$(wind_deg_to_text "${deg}")
-  data=$(cat ./wind_direction.json | ${JQ} ".${text}" -r)
+  data=$(jq ."${text}" -r < "$HOME"/.conky/conky_simpleforcast/wind_direction.json | xargs printf "%s")
   echo $data
 
 }
