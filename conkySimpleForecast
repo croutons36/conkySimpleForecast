@@ -47,7 +47,7 @@ fi
 API_KEY=${API_KEY:-$(cat ${CONFIG} | jq '.api_key' -r)}
 CACHE_DIR=${CACHE_DIR:-$(cat ${CONFIG} | jq '.cache_dir' -r)}
 CITY_ID=${CITY_ID:-$(cat ${CONFIG} | jq '.city_id' -r)}
-LANGUAGE=${LANGUAGE:-$(cat ${CONFIG} | jq '.language' -r)} # valid values are: see languages.txt
+LANGUAGE=$(cat ${CONFIG} | jq '.language' -r) # valid values are: see languages.txt
 LOCATION=${LOCATION:-$(cat ${CONFIG} | jq '.location' -r)}
 TYPE=${TYPE:-$(cat ${CONFIG} | jq '.type' -r)}  # valid values are [current, forecast]
 UNITS=${UNITS:-$(cat ${CONFIG} | jq '.units' -r)}
